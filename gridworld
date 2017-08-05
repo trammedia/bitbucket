@@ -1,0 +1,133 @@
+// gridWorld Game in C++
+//author Justin Caddaye
+//created August 2017
+//Swinburne Games Programming
+
+//incude input output stream
+#include <iostream>
+
+//include string functions
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	// declaring variables:
+
+	//define a string variable
+	string mystring;
+
+	string choice;
+
+	string box_kind[] = { "#","D"," ","G" };
+
+	// define player is alive variable
+	bool playerAlive = true;
+
+	char  movoption[] = { 'N','S','E','W' };
+
+	string line1[] = { "#","#","#","#","#" };
+	string line2[] = { "#"," "," ","#"," " };
+	cout << line1[0];
+
+	//declare a function
+	//string lowerCase(string choice);
+
+	//begin game welcome
+	mystring = "Welcome to the deadly Maze. Can you find gold and Escape?!";
+
+	cout << mystring << endl;
+
+	//empty new line
+	cout << "\n";
+
+	mystring = "You are in a maze of tunnels , press N,S,E,W to move";
+
+	// print out the result: cout means character output , << means next step, endl means end line
+	cout << mystring << endl;
+
+	mystring = "Careful, there are pitfalls about!";
+
+	cout << mystring << endl;
+
+	mystring = "----------------------------------------------";
+
+	cout << mystring << endl;
+
+	while (playerAlive == true)
+	{
+		cout << "\n";
+		//get choice
+		cin >> choice;
+
+		//convert to uppercase
+		for (unsigned int i = 0; i < choice.size(); i++)
+		{
+			choice.at(i) = toupper(choice.at(i));
+		}
+
+
+
+		if (choice == "N")
+		{
+			mystring = " you chose ";
+			// print out choice
+			cout << mystring << choice << ".";
+		}
+
+		if (choice == "S")
+		{
+			mystring = " you chose ";
+			// print out choice
+			cout << mystring << choice << ".";
+
+		}
+
+		if (choice == "E")
+		{
+			mystring = " you chose ";
+			// print out choice
+			cout << mystring << choice << ".";
+
+		}
+
+		if (choice == "W")
+		{
+			mystring = " you chose ";
+			// print out choice
+			cout << mystring << choice << ".";
+			
+		}
+
+		else if (choice != "N" && choice != "E" && choice != "S" && choice != "W")
+		{
+
+			mystring = " you chose ";
+			// print out choice
+			cout << mystring << choice << ".";
+
+			mystring = "\n Wrong button im afraid!";
+			cout << mystring << ".";
+
+
+		}
+	}
+
+	cin.get();
+
+	// terminate the program:
+	return 0;
+}
+
+
+
+// basic class
+class Map
+{
+	public:
+
+
+	private:
+
+};
